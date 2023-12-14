@@ -92,13 +92,17 @@ const sum = (root) => {
     console.log(sum);
 }
 
-const sumRecursive = (root, sum = 0) => {
-    if(root.left !== null && root.right !== null) 
-    {
-        sum += sumRecursive(root.left)
-    };
-    
-    
+
+//Base case return 0
+//Porownaj sume noda czy z leftem bylo wiecej czy z rightem
+const pathSum = (root) => {
+    if(root.left==null && root.right==null) return root.val;
+    console.log(root.right.val)
+    var leftVal = pathSum(root.left);
+    console.log(leftVal)
+    var rightVal = pathSum(root.right);
+
+    return Math.max((root.val+leftVal),(root.val+rightVal));
 }
 
 const includes = (root,target) => {
@@ -114,14 +118,18 @@ const b = new Node(5);
 const c = new Node(21);
 const d = new Node(-2);
 const e = new Node(1213);
+const f = new Node(555);
+const g = new Node(22222);
 
 a.left = b;
 a.right = c;
 b.left = d;
 b.right = e;
+c.left = f;
+c.right = g;
 console.log(depthFirstValue(a));
 breadthFirstValue(a);
 console.log(includes(a,"c"));
 sum(a);
-sumRecursive(a)
 console.log(minimum(a));
+console.log(pathSum(a))
