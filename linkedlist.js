@@ -26,7 +26,7 @@ insertFirst(data) {
 
 insertLast(data){
     let node = new Node(data);
-   let current; 
+    let current; 
 
    if(this.size == 0){
        this.head = node;

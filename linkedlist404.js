@@ -4,24 +4,19 @@ class Node{
         this.next = next;
     }
 }
-//tworzy nam nowego noda ktory przechowuje data i co nastepne jest kurna xD
 
 class LinkedList{
     constructor(){
         this.head = null;
         this.size = 0;
     }
-    //tworzy nam linkedliste ktora zawiera w sobie glowe ktora defaultowa jest null i jaka jest wielkosc
-    //defaultowa lista jest pusta
-
     //insert
     insertFirst(data){
         this.head = new Node(data,this.head);
         this.size++;
     }
 
-    //dojsc az this.next jest null
-    //wstawic tam nowego noda z data
+
     insertLast(data){
         let current = this.head;
         let node = new Node(data);
@@ -36,7 +31,7 @@ class LinkedList{
         this.size++;
     }
 
-    //Ma dojsc do tego indexu co trza i wtedy dac data
+  
     insertAtIndex(index,data){
         let current = this.head;
         let previous;
