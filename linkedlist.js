@@ -17,6 +17,9 @@ insertFirst(data) {
     this.head = new Node(data,this.head);
     this.size++;
 }
+
+//Trying out branching
+
 insertLast(data){
     let node = new Node(data);
    let current; 
