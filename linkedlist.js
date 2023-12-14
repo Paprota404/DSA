@@ -20,6 +20,8 @@ insertFirst(data) {
 
 //Trying out branching
 
+//Merging conflict
+
 insertLast(data){
     let node = new Node(data);
    let current; 
