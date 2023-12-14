@@ -18,6 +18,8 @@ insertFirst(data) {
     this.size++;
 }
 
+//Merging conflict
+
 //Trying out branching
 
 insertLast(data){
